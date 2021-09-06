@@ -28,7 +28,7 @@ class MapActivity : AppCompatActivity(),OnMapReadyCallback {
         if (::searchResult.isInitialized.not()){
             intent?.let {
                 searchResult = it.getParcelableExtra<SearchResultEntity>(SEARCH_RESULT_EXTRA_KEY)
-                    ?: throw Exception("데이터가 존재하지 않습니다.")
+                    ?: throw Exception("데이터가 존재하지 않습니다. ")
                 setupGoogleMap()
             }
         }
