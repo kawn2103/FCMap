@@ -2,6 +2,7 @@ package kst.app.fcmap.utillity
 
 import kst.app.fcmap.Key
 import kst.app.fcmap.Url
+import kst.app.fcmap.response.address.AddressInfoResponse
 import kst.app.fcmap.response.search.SearchResponse
 import retrofit2.Response
 import retrofit2.http.GET
@@ -29,7 +30,7 @@ interface ApiService {
         @Query("centerLat") centerLat: String? = null
     ): Response<SearchResponse>
 
-    /*@GET(Url.GET_TMAP_REVERSE_GEO_CODE)
+    @GET(Url.GET_TMAP_REVERSE_GEO_CODE)
     suspend fun getReverseGeoCode(
         @Header("appKey") appKey: String = Key.TMAP_API,
         @Query("version") version: Int = 1,
@@ -38,5 +39,5 @@ interface ApiService {
         @Query("lon") lon: Double,
         @Query("coordType") coordType: String? = null,
         @Query("addressType") addressType: String? = null
-    ): Response<AddressInfoResponse>*/
+    ): Response<AddressInfoResponse>
 }
