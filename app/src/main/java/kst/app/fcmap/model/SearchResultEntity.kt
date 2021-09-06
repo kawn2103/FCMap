@@ -8,5 +8,4 @@ data class SearchResultEntity(
     val fullAdress: String,
     val name: String,
     val locationLatLng: LocationLatLngEntity
-
 ):Parcelable
